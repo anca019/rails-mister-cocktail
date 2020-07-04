@@ -8,10 +8,15 @@
 
       <% @cocktails.each do |cocktail| %>
           <div class="col-12 col-md-6 col-lg-3">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1593105388446-7cea7f9255e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');">
+            <% if cocktail.photo? %>
+              <% background_url = cl_image_path cocktail.photo.key, width: 400, height: 500, crop: :fill %>
+            <% else %>
+              <% background_url = 'https://source.unsplash.com/500x400/?cocktail' %>
+            <% end %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
               <%= cocktail.name %>
             </div>
-            <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-warning btn-sm" %>
+            <%= link_to "Get recipe", cocktail_path(cocktail), class: "btn btn-warning btn-sm" %>
           </div>
       <% end %>
     </div>
