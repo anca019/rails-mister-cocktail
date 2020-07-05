@@ -1,6 +1,9 @@
 <div id="cover">
   <div class="navbar">
-    <%= fa_icon "cocktail" %>
+    <div class="navbar-left">
+      <%= image_tag "Cocktail_logo.png" %>
+      <p>CocktailsMaker</p>
+    </div>
     <%= link_to "Add a cocktail", new_cocktail_path, class: "button" %>     
   </div>
   <div class="container">
@@ -14,7 +17,7 @@
               <% background_url = 'https://source.unsplash.com/500x400/?cocktail' %>
             <% end %>
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
-              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              <%= link_to cocktail.name, cocktail_path(cocktail), class: "show" %>
             </div>
           </div>
       <% end %>

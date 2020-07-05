@@ -5,9 +5,15 @@
   margin-bottom: 64px;
 }
 
-
-.navbar .navbar-brand img {
-  width: 40px;
-  margin: 0;
-  padding: 0;
+.navbar img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.navbar a {
+	text-decoration: none;
+}
+.navbar-left {
+   color: $darkermellon;
+   font-family: $name-font;
 }
