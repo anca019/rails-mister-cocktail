@@ -9,6 +9,7 @@
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  margin-right: 4px;
 }
 .navbar a {
 	text-decoration: none;
@@ -16,4 +17,9 @@
 .navbar-left {
    color: $darkermellon;
    font-family: $name-font;
+   display: flex;
+   align-items: center;
+}
+.navbar-left p {
+	margin-buttom: 0;
 }
