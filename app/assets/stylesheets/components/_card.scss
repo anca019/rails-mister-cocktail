@@ -14,3 +14,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 8px;
 }
+.card a {
+  text-decoration: none;
+  color: white;
+}
+.card a:hover {
+  text-shadow: none;
+}
