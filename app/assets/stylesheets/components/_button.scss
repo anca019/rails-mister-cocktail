@@ -1,0 +1,11 @@
+.button {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $mellon;
+  transition: background 0.3s ease;
+}
+.button:hover {
+  background: $darkermellon;
+  color: white;
+}
