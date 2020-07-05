@@ -17,9 +17,13 @@
 .navbar-left {
    color: $darkermellon;
    font-family: $name-font;
+   font-size: 24px;
    display: flex;
    align-items: center;
 }
 .navbar-left p {
 	margin-buttom: 0;
+}
+p {
+  margin-buttom: 0;
 }
