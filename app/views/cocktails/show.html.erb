@@ -1,10 +1,12 @@
-     <p><%= @cocktail.name %></p>
-     
-     <ul>
-     <% @cocktail.doses.each do |dose| %>
-         <li><%= dose.description %> <%= dose.ingredient.name %></li>
-         <%= link_to "Delete ingredient", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-     <% end %>
-     </ul>
+<% background_url = cl_image_path cocktail.photo.key, width: 400, height: 500, crop: :fill %>
+<div class="container" style="background-image: url('<%= background_url %>');">
+  <p><%= @cocktail.name %></p>    
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.description %> <%= dose.ingredient.name %></li>
+      <%= link_to "Delete ingredient", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+  </ul>
     
-     <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
+  <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
+</div>
