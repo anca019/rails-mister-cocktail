@@ -7,10 +7,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 56px;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
-.cover-content a:hover {
+#cover a:hover {
 	text-decoration: none;
 }
 

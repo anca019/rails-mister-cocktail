@@ -10,3 +10,23 @@
   color: white;
 }
 
+.btn-large {
+    height: 90px;
+    background-color: $mellon;
+    width: 300px;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    border-radius: 4px;
+    line-height: 90px;
+    opacity: 0.6;
+    text-align: center;
+
+}
+
+.btn-large a {
+	color: white;
+	font-family: $name-font;
+}
+.btn-large:hover {
+	opacity: 0.7;
+}
