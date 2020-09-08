@@ -30,6 +30,7 @@ gem 'font-awesome-rails', '~> 4.4'
 gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
+gem 'pg_search', '~> 2.3.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
