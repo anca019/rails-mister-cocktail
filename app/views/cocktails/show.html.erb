@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <% background_url = cl_image_path @cocktail.photo.key, width: 400, height: 500, crop: :fill %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= background_url %>');">
   <p><%= @cocktail.name %></p>

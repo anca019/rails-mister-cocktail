@@ -1,11 +1,10 @@
-<div id="cover">
-  <div class="navbar">
-    <div class="navbar-left">
-      <%= image_tag "Cocktail_logo.png" %>
-      <p>CocktailsMaker</p>
-    </div>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "button" %>     
+<%= render 'shared/navbar' %>
+<div id="cover" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'seaside.jpg' %>);">
+  <div class="cover-content">
+    <h1>CocktailsMaker</h1>
+    <%= link_to "Create your cocktail", new_cocktail_path, class: "button" %>
   </div>
+</div>
   <div class="container">
     <div class="row">
 
@@ -23,4 +22,3 @@
       <% end %>
     </div>
   </div>
-</div>
