@@ -1,18 +1,19 @@
 .search-form-control {
   position: relative;
-  width: 300px;
+  margin-top: 56px;
+
 
 }
 
 .search-form-control .btn-search {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+  top: 0;
+  bottom: 0;
+  right: -46px;
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
+  height: 3rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
 }
@@ -24,6 +25,15 @@
 }
 
 .form-control {
-  background-color: $mellon;
+  background-color: black;
   opacity: 0.5;
+
+}
+#search_query  {
+  width: 400px;
+}
+
+.search-bar {
+  width: 500px;
+  margin: 0 auto;
 }
