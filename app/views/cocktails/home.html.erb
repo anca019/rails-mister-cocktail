@@ -1,14 +1,14 @@
 <%= render 'shared/navbar' %>
 <div id="cover" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'seaside.jpg' %>);">
     <h1>CocktailsMaker</h1>
-    <%= link_to "Create your cocktail", new_cocktail_path, class: "btn-large" %>
-    <%= form_tag cocktails_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Search by name or ingredient"%>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+        <%= simple_form_for :search, url: cocktails_path, method: :get do |f| %>
+          <div class="search-form-control form-group">
+            <input class="form-control string required" type="text" name="search[query]" style="width: 300px" id="search_query" placeholder="Search by name or ingredient" />
+            <button name="button" type="submit" class="btn-search">
+              <i class="fa fa-search"></i> 
+            </button>
+          </div>
+        <% end %>
 </div>
   <div class="container">
     <div class="row">
