@@ -1,7 +1,19 @@
 <%= render 'shared/navbar' %>
-  <div class="container" style="margin-top: 56px">
+<div id="cover" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'seaside.jpg' %>);">
+    <h1>CocktailsMaker</h1>
+    <%= link_to "Create your cocktail", new_cocktail_path, class: "btn-large" %>
+    <%= form_tag cocktails_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Search by name or ingredient"%>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+</div>
+  <div class="container">
     <div class="row">
-      <% @cocktails.each do |cocktail| %>
+
+      <% Cocktail.all.each do |cocktail| %>
           <div class="col-12 col-md-6 col-lg-4">
             <% if cocktail.photo.key %>
               <% background_url = cl_image_path cocktail.photo.key, width: 400, height: 500, crop: :fill %>
