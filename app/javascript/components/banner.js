@@ -1,10 +1,11 @@
 import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
-  new Typed('#search_query', {
-    strings: ["Search by name or ingredient"],
+  new Typed('#banner-typed-text', {
+    strings: ["Find your favorite ingredients and mix your own cocktails "],
     typeSpeed: 50,
-    loop: true
+    loop: true,
+ 
   });
 }
 

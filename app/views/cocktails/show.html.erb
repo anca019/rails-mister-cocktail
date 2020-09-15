@@ -13,10 +13,8 @@
                   <%= fa_icon "far fa-trash-alt" %>
                 <% end %>
               <% end %>
+              <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
             </ul>
-    </div>
-      </div>
-      <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
     </div>
   </div>
 </div>
