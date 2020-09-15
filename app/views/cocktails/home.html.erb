@@ -1,16 +1,14 @@
 <%= render 'shared/navbar' %>
 <div id="cover" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'cocktail-background.jpg' %>);">
-    <h2>CocktailsOnRails</h2>
-    
-        <%= simple_form_for :search, url: cocktails_path, method: :get do |f| %>
-          <div class="search-form-control form-group">
-            <input class="form-control string required" type="text" name="search[query]" style="width: 300px" id="search_query" placeholder="Search by name or ingredient" />
-            <button name="button" type="submit" class="btn-search">
-              <i class="fa fa-search"></i> 
-            </button>
-          </div>
-        <% end %>
-   
+    <h2>CocktailsMixer</h2>
+      <%= simple_form_for :search, url: cocktails_path, method: :get do |f| %>
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" name="search[query]" style="width: 300px" id="search_query" placeholder="Search by name or ingredient" />
+          <button name="button" type="submit" class="btn-search">
+            <i class="fa fa-search"></i> 
+          </button>
+        </div>
+      <% end %>
 </div>
   <div class="container">
     <div class="row">
