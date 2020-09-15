@@ -5,6 +5,8 @@
 
 }
 
+
+
 .search-form-control .btn-search {
   position: absolute;
   top: 0;
@@ -27,8 +29,16 @@
 .form-control {
   background-color: black;
   opacity: 0.5;
-
+  font-family: $name-font;
 }
+
+.form-control:hover {
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  font-family: $name-font;
+}
+
 #search_query  {
   width: 400px;
 }

@@ -1,0 +1,19 @@
+current directory: /home/anca/code/anca019/rails-mister-cocktail/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+/home/anca/.rbenv/versions/2.6.5/bin/ruby -I /home/anca/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200915-294-wijwyj.rb extconf.rb
+creating Makefile
+
+current directory: /home/anca/code/anca019/rails-mister-cocktail/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/anca/code/anca019/rails-mister-cocktail/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/anca/code/anca019/rails-mister-cocktail/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20200915-294-1eqqzye/byebug
