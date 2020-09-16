@@ -73,7 +73,7 @@
   border-radius: 36px;
   text-align: center;
   display: flex;
-  margin-left: 36px;
+  margin-right: 36px;
   flex-direction: column;
 }
 
@@ -100,4 +100,10 @@
 .fa-edit {
   color: $mellon;
   font-size: 22px;
+}
+
+@media (max-width: 800px) {
+  .show-cocktail-details {
+    margin-bottom: 36px;
+  }
 }
