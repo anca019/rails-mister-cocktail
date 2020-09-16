@@ -5,19 +5,26 @@
       <%=  cl_image_tag @cocktail.photo.key, width: 350, height: 400 %>
     </div>
     <div class="show-cocktail-details">
-      <h3><%= @cocktail.name %></h3>
+      <div class="cocktail-title">
+        <h3><%= @cocktail.name %>
+          <%= link_to new_cocktail_dose_path(@cocktail) do %>
+            <i class="fa fa-edit"></i>
+          <% end %>
+        </div>
             <ul class="list">
               <% @cocktail.doses.each do |dose| %>
-                <li><%= dose.description %> <%= dose.ingredient.name %></li>
-                <%= link_to  dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <span>
-                  <i class="fa fa-trash"></i>
-                </span>
-                <% end %>
+                <div class="cocktail-details">
+                  <%= link_to  dose_path(dose), method: :delete, data: { confirm: "Delete this ingredient?" } do %>
+                     <span>
+                      <i class="fa fa-trash"></i>
+                    </span>
+                  <% end %>
+                  <li><%= dose.description %> <%= dose.ingredient.name %></li>
+                </div>
               <% end %>
               <br>
-              <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "button" %>
-              <%= link_to 'Browse cocktails', cocktails_path, class: "button" %>
+              <div>
+              </div>
             </ul>
     </div>
   </div>

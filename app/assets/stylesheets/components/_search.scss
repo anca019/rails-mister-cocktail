@@ -57,22 +57,47 @@
 
 .fa-trash {
   color: $mellon;
+  margin-right: 16px;
 }
 
 .list {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
+ 
 }
 
 .show-cocktail-details {
   background-color: $light-mellon;
+  font-family: $name-font;
   border-radius: 36px;
   text-align: center;
+  display: flex;
+  margin-left: 36px;
+  flex-direction: column;
 }
 
 .show-cocktail-details h3 {
+  font-size: 42px;
   color: $mellon;
   font-family: $name-font;
   font-weight: bold;
+  margin-bottom: 48px;
+  margin-top: 16px;
+}
+
+.cocktail-details {
+  padding-left: 56px;
+  padding-right: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.cocktail-title {
+  margin-top: 16px;
+}
+
+.fa-edit {
+  color: $mellon;
+  font-size: 22px;
 }
