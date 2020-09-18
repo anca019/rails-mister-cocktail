@@ -24,6 +24,7 @@
     color: $mellon;
     opacity: 0.8;
     font-family: $name-font;
+
 }
 
 #banner-typed-text {
@@ -33,6 +34,31 @@
   opacity: 0.8;
 }
 
+.add-cocktail {
+  margin: 0 auto;
+  width: 350px;
+  margin-top: 64px;
+  background-color: $light-mellon;
+  font-family: $name-font;
+  border-radius: 36px;
+  padding: 24px;
+
+}
+
+
+.add-cocktail .form-control {
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid $light-mellon;
+}
+
+.add-cocktail h3{
+  color: $mellon;
+  font-family: $name-font;
+  margin-bottom: 24px;
+
+}
 
 @media (max-width: 992px) {
   #cover h2 {
@@ -42,10 +68,6 @@
      width: 100vw;
   }
 
-  
-  .btn-search {
-
-  }
 }
 
 @media(max-width: 768px) {
