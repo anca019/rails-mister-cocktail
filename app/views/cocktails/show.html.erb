@@ -20,11 +20,15 @@
                 </div>
               <% end %>
               <br>
+              <div style="margin-top: 56px;">
+                <%= link_to "Cocktails menu", cocktails_path, class: "button" %>
+              </div>
+              <br>
               <div>
               </div>
             </ul>
     </div>
-        <div class="show-cocktail">
+    <div class="show-cocktail">
       <%=  cl_image_tag @cocktail.photo.key, width: 350, height: 400 %>
     </div>
   </div>
