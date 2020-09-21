@@ -4,14 +4,12 @@
       <% @cocktails.each do |cocktail| %>
           <div class="col-md-12 col-lg-4">
             <% if cocktail.photo.present? %>
-              <% background_url = cl_image_path cocktail.photo.key, width: 400, height: 500, crop: :fill %>
-            <% else %>
-              <% background_url = 'https://source.unsplash.com/500x400/?cocktail' %>
-            <% end %>
-            <%= link_to cocktail_path(cocktail), class: "show" do %>
-              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
-                <%= cocktail.name %>
-              </div>
+              <% background_url = cl_image_path cocktail.photo.key, width: 400, height: 500, crop: :fill %>  
+              <%= link_to cocktail_path(cocktail), class: "show" do %>
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
+                  <%= cocktail.name %>
+                </div>
+              <% end %>
             <% end %>
           </div>
       <% end %>
