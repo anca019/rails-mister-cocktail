@@ -1,7 +1,8 @@
 class CocktailsController < ApplicationController
   def index
-    if params[:query].present?
-      @cocktails = Cocktail.search_by_name_and_ingredient(params[:query])
+
+    if params.dig(:search, :query).present?
+      @cocktails = Cocktail.global_search(params.dig(:search, :query))
     else
       @cocktails = Cocktail.all
     end

@@ -6,10 +6,10 @@ class Cocktail < ApplicationRecord
   has_one_attached :photo
 
   include PgSearch::Model
-    pg_search_scope :search_by_name_and_ingredient,
-      against: [ :name ],
+    pg_search_scope :global_search,
+      against: :name,
       associated_against: {
-        ingredients: [ :name ]
+        ingredients: :name
       },
       using: {
         tsearch: { prefix: true }
