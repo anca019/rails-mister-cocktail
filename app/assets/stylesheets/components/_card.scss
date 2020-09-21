@@ -6,7 +6,6 @@
   width: 300px;
   display: flex;
   align-items: center;
-  color: white;
   font-size: 24px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 3px;
@@ -14,10 +13,9 @@
   margin-bottom: 32px;
   font-family: $name-font;
 }
-.card a {
-  text-decoration: none;
+.card  {
   color: $mellon;
 }
-.card a:hover {
-  text-shadow: none;
+a {
+  text-decoration: none!important;
 }
